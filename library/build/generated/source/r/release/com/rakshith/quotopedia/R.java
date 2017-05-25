@@ -2871,8 +2871,8 @@ containing a value of this type.
         public static int middle=0x7f0d0039;
         public static int mini=0x7f0d0037;
         public static int multiply=0x7f0d001f;
-        public static int nav_camera=0x7f0d0098;
         public static int nav_gallery=0x7f0d0099;
+        public static int nav_home=0x7f0d0098;
         public static int nav_manage=0x7f0d009b;
         public static int nav_send=0x7f0d009d;
         public static int nav_share=0x7f0d009c;

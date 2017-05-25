@@ -125,7 +125,7 @@ public class CustomTextView extends TextView {
 
     /**
      * Custom span to highlight clickable text.
-     *
+     * <p>
      * For underline use {@link ClickableSpan} directly
      */
     private static class TextURLSpan extends ClickableSpan {
@@ -165,4 +165,3 @@ public class CustomTextView extends TextView {
         }
     }
 }
-

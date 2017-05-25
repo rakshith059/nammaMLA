@@ -40,12 +40,12 @@
         "source": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/anim/abc_slide_out_top.xml"
     },
     {
-        "merged": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
-        "source": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/anim/design_snackbar_out.xml"
-    },
-    {
         "merged": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
         "source": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.2.0/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/exploded-aar/com.android.support/design/25.2.0/res/anim/design_snackbar_out.xml"
     },
     {
         "merged": "/Users/rakshith/Desktop/untitled folder 2/MyMla/library/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",

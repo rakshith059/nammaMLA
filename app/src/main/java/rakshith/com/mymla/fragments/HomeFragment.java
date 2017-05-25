@@ -48,10 +48,11 @@ public class HomeFragment extends BaseFragment {
         homePagerAdapter = new HomePagerAdapter(getChildFragmentManager());
 
         homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.home), new Bundle());
-        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.story), new Bundle());
-        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.home), new Bundle());
-        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.story), new Bundle());
-        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.home), new Bundle());
+        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.image), new Bundle());
+        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.video), new Bundle());
+        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.events), new Bundle());
+        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.write_to_mla), new Bundle());
+        homePagerAdapter.addFragment(new StoryFragment(), getResources().getString(R.string.info), new Bundle());
 
         vpHomePager.setAdapter(homePagerAdapter);
     }

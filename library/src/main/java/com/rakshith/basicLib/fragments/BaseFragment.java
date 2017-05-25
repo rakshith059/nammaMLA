@@ -5,11 +5,13 @@ import android.app.Fragment;
 import android.content.Context;
 import android.os.Build;
 
+import com.rakshith.basicLib.activities.BaseActivity;
 import com.rakshith.basicLib.interfaces.FragmentCallbacks;
 
 public class BaseFragment extends Fragment {
 
     public FragmentCallbacks fragmentCallbacks;
+    BaseActivity baseActivity = new BaseActivity();
 
     @Override
     public void onAttach(Context context) {
