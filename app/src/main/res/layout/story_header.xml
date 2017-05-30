@@ -18,8 +18,8 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/size_10dp"
         android:text="@string/app_name"
-        android:textColor="@color/black"
+        android:textColor="@color/colorPrimary"
         android:textSize="@dimen/size_24sp"
-        android:textStyle="bold" />
+        android:textStyle="italic" />
 
 </LinearLayout>

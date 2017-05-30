@@ -1,6 +1,7 @@
 package rakshith.com.mymla.holders;
 
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -38,14 +39,19 @@ public class HeaderStoryHolder extends RecyclerView.ViewHolder {
     }
 
     public void bind(StoryModel storyItem, int position) {
-        String imageUrl = Constants.IMAGE_BASE_URL + storyItem.getStoryImageUrl();
-        if (!TextUtils.isEmpty(imageUrl))
-            AppController
-                    .getInstance()
-                    .getImageLoader()
-                    .get(imageUrl,
-                            ImageLoader.getImageListener(ivStoryIcon, R.color.cardview_shadow_start_color, R.color.black));
+        if (storyItem != null) {
+            String imageUrl = Constants.IMAGE_BASE_URL + storyItem.getStoryImageUrl();
+            if (!TextUtils.isEmpty(imageUrl))
+                AppController
+                        .getInstance()
+                        .getImageLoader()
+                        .get(imageUrl,
+                                ImageLoader.getImageListener(ivStoryIcon, R.color.cardview_shadow_start_color, R.color.black));
 
-        tvStoryHeadline.setText(storyItem.getStoryHeadline());
+            String headline = storyItem.getStoryHeadline();
+            if (!TextUtils.isEmpty(headline)) {
+                tvStoryHeadline.setText(Html.fromHtml(headline));
+            }
+        }
     }
 }

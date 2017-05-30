@@ -10,6 +10,7 @@ import com.rakshith.basicLib.interfaces.FragmentCallbacks;
 import java.util.ArrayList;
 import java.util.List;
 
+import rakshith.com.mymla.holders.ChildStoryHolder;
 import rakshith.com.mymla.holders.HeaderStoryHolder;
 import rakshith.com.mymla.models.StoryModel;
 
@@ -32,8 +33,8 @@ public class StoriesListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         if (position == 0) {
             return HeaderStoryHolder.create(parent);
         } else
-            return HeaderStoryHolder.create(parent);
-//            return ChildStoryHolder.create(parent);
+//            return HeaderStoryHolder.create(parent);
+            return ChildStoryHolder.create(parent);
     }
 
     @Override
@@ -41,7 +42,7 @@ public class StoriesListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         StoryModel storyItem = storyList.get(position);
         if (holder instanceof HeaderStoryHolder) {
             ((HeaderStoryHolder) holder).bind(storyItem, position);
-        }
+        } else ((ChildStoryHolder) holder).bind(storyItem, position);
     }
 
     @Override

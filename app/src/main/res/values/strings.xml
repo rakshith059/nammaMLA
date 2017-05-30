@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">MyMla</string>
 
+    <string name="youtube_key">AIzaSyDnoRz5rkf-GDeqQ_8uKRuj0y-6d2-ZEvQ</string>
+    <string name="channel_id">UC6LWQg0ikbTIW6Nho5_5W_A</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -14,5 +17,7 @@
     <string name="info">Info</string>
     <string name="something_went_wrong">Oops...\nSomething went wrong!</string>
     <string name="no_internet">Please check your Internet connection and try again.</string>
+    <string name="headline">headline</string>
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
 
 </resources>

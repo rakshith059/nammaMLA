@@ -36,5 +36,13 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.0.1'
 
     testCompile 'junit:junit:4.12'
+
+    //Adding gson library
+    compile 'com.google.code.gson:gson:2.4'
+
+    //Added libarary project(library project includes some of the basic methods)
     compile project(':library')
+
+    //compiling the youtube player files for libs folder(Added jar in libs)
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }

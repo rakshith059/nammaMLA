@@ -15,12 +15,18 @@ import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.rakshith.basicLib.activities.BaseActivity;
 import com.rakshith.basicLib.interfaces.FragmentCallbacks;
+import com.rakshith.basicLib.utils.NetworkVolleyRequest;
 import com.rakshith.basicLib.widgets.TelephonyInfo;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import rakshith.com.mymla.R;
 import rakshith.com.mymla.fragments.HomeFragment;
@@ -46,9 +52,34 @@ public class MainActivity extends BaseActivity
         setHomeScreen();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(final View view) {
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View view) {
+                JSONObject jsonObject = new JSONObject();
+                try {
+                    jsonObject.put("name", "rakshith");
+                    jsonObject.put("password", "rakshith");
+
+                    HashMap<String, String> request = new HashMap<String, String>();
+                    request.put("body", jsonObject.toString());
+
+                    NetworkVolleyRequest loginRequest = new NetworkVolleyRequest(NetworkVolleyRequest.RequestMethod.POST,
+                            "http://achan.in/api/login", String.class, new HashMap<String, String>(), request,
+                            new NetworkVolleyRequest.Callback() {
+                                @Override
+                                public void onSuccess(Object response) {
+                                    Log.d("Rakshith", response.toString());
+                                }
+
+                                @Override
+                                public void onError(int errorCode, String errorMessage) {
+
+                                }
+                            }, NetworkVolleyRequest.ContentType.JSON);
+                    loginRequest.execute();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 ////                if (isNetworkAvailable(MainActivity.this))
 ////                    Snackbar.make(view, "internet is present", Snackbar.LENGTH_LONG)
 ////                            .setAction("Action", null).show();
@@ -80,8 +111,8 @@ public class MainActivity extends BaseActivity
 //                    }
 //                });
 //
-//            }
-//        });
+            }
+        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
